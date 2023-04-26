@@ -4,7 +4,7 @@ import SwContext from "../../context/SwContext";
 import styles from "./Form.module.css";
 export default function Form() {
   const { sw, setSw, info, setInfo } = useContext(SwContext);
-  const [more, setMore] = useState(10);
+  const [more, setMore] = useState(5);
 
   //modele ve ada göre getirme
   // useEffect(() => {
@@ -18,18 +18,16 @@ export default function Form() {
   // }, [info]);
 
   useEffect(() => {
-    if (!info) {
-      return;
-    }
     axios.get(`https://swapi.dev/api/starships/`).then((res) => {
       const firstTenShips = res.data.results.slice(0, more);
       setSw(firstTenShips);
       setInfo("");
     });
-  }, []);
+  }, [more]);
 
   console.log(sw);
   console.log(more);
+
   const formSubmit = (e) => {
     e.preventDefault();
     if (!info) {
@@ -58,7 +56,9 @@ export default function Form() {
           />
         </label>
 
-        <button onClick={() => setMore((prev) => prev + 3)}>More</button>
+        <button onClick={() => setMore((prev) => prev + 2)}>
+          Daha Fazla Yükle
+        </button>
       </form>
     </div>
   );

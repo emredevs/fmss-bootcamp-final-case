@@ -6,6 +6,8 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 1%;
+    width:900px;
+
 }
 
 .list li{
