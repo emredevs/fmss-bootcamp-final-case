@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useContext, useState } from "react";
 import SwContext from "../../context/SwContext";
-
+import styles from "./Form.module.css";
 export default function Form() {
   const { sw, setSw, info, setInfo } = useContext(SwContext);
   const [more, setMore] = useState(10);
@@ -48,7 +48,9 @@ export default function Form() {
         <label htmlFor="name">
           Name/Model:
           <input
+            className={styles.Input}
             value={info}
+            placeholder="bir gemi adı yada modeli giriniz"
             type="text"
             name="name"
             id="name"
