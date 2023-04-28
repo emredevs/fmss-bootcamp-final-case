@@ -12,16 +12,18 @@ export default function List() {
         {sw.map((item, index) => {
           return (
             <li key={index}>
-              {Images.map((img, index) => (
-                <div key={index}>
-                  {img.name === item.name ? (
-                    <img className={styles.img} src={img.img} alt="" />
-                  ) : (
-                    ""
-                  )}
-                </div>
-              ))}
-              <h3>Gemi Adı: {item.name}</h3>
+              {Images.map((img, index) =>
+                img.name === item.name ? (
+                  <img
+                    key={index}
+                    className={styles.img}
+                    src={img.img}
+                    alt=""
+                  />
+                ) : null
+              )}
+
+              <p> Gemi Adı: {item.name}</p>
               <p>Yıldız Gemisi Sınıfı: {item.starship_class}</p>
               <p>Model: {item.model}</p>
               <p>Hiper Sürücü Derecelendirmesi: {item.hyperdrive_rating}</p>

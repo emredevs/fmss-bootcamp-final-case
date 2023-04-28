@@ -4,7 +4,7 @@ const SwContext = createContext();
 export const SwContextProvider = ({ children }) => {
   const [sw, setSw] = useState([]);
   const [info, setInfo] = useState("");
-  const [more, setMore] = useState(5);
+  const [more, setMore] = useState(4);
   const values = { sw, setSw, info, setInfo, more, setMore };
   return <SwContext.Provider value={values}>{children}</SwContext.Provider>;
 };

@@ -12,15 +12,12 @@ export default function Description() {
   }
   return (
     <div className={styles.container}>
-      {Images.map((img, index) => (
-        <div key={index}>
-          {img.name === starWars.name ? (
-            <img className={styles.img} src={img.img} alt="" />
-          ) : (
-            ""
-          )}
-        </div>
-      ))}
+      {Images.map((img, index) =>
+        img.name === starWars.name ? (
+          <img key={index} className={styles.img} src={img.img} alt="" />
+        ) : null
+      )}
+
       <h1>{starWars.name}</h1>
       <p>Yıldız Gemisi Sınıfı: {starWars.starship_class}</p>
       <p>Model: {starWars.model}</p>
