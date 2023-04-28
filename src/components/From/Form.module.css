@@ -5,4 +5,10 @@
     border: 0;
     width: 185px;
     border-radius: 10px;
+    
+}
+label{
+    font-size: large;
+    font-weight: bold;
+    color:white;
 }

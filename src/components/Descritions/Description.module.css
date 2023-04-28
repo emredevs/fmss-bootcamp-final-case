@@ -1,0 +1,32 @@
+.container{
+    margin-top: 50px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 5px;
+    backdrop-filter: blur(20px);
+    color: white;
+    /* background-repeat: no-repeat  ;
+    background-size: cover;
+    background-image: url("../../../public/img/bg8.jpg"); */
+    
+}
+.img{
+    border-radius: 10px;
+    width: 400px;
+    height: 300px;
+}
+
+.desc{
+    margin-top: 5px;
+    padding: 3%;
+    width: 40%;
+    border-radius: 10px; 
+    background-color: aqua;
+    margin-left: 27%;
+  
+  }
+  .NavLink{
+      color: white;
+    text-decoration: none;
+  
+  }

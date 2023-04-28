@@ -42,7 +42,7 @@ export default function Form() {
     <div>
       <form onSubmit={formSubmit}>
         <label htmlFor="name">
-          Name/Model:
+          Name/Model:{" "}
           <input
             className={styles.Input}
             value={info}
