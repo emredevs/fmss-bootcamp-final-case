@@ -13,6 +13,7 @@ export default function List() {
         {sw.map((item, index) => {
           return (
             <li key={index}>
+              {/* Image.json dosyamdaki resimleri aldığımız yer */}
               {Images.map((img, index) =>
                 img.name === item.name ? (
                   <img

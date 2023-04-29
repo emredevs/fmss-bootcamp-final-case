@@ -13,6 +13,7 @@ export default function Description() {
   }
   return (
     <div className={styles.container}>
+      {/* Image.json dosyamdan resimleri aldığımız yer */}
       {Images.map((img, index) =>
         img.name === starWars.name ? (
           <img key={index} className={styles.img} src={img.img} alt="" />

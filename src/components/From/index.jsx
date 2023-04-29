@@ -5,17 +5,6 @@ import styles from "./Form.module.css";
 export default function Form() {
   const { sw, setSw, info, setInfo, more } = useContext(SwContext);
 
-  //modele ve ada göre getirme
-  // useEffect(() => {
-  //   if (!info) {
-  //     return;
-  //   }
-  //   axios.get(`https://swapi.dev/api/starships/?search=${info}`).then((res) => {
-  //     setSw(res.data.results);
-  //     setInfo("");
-  //   });
-  // }, [info]);
-
   //sayfa ilk yüklendiğinde bize ilk 4 gimiyi getir ve daha fazla yükle butonuna tıklandığında diğer gemileride listeler
   useEffect(() => {
     axios.get(`https://swapi.dev/api/starships/`).then((res) => {
@@ -34,7 +23,7 @@ export default function Form() {
     if (!info) {
       return;
     }
-    //modele ve ada göre getirme
+    //modele ve ada göre veri getirme işlemi
     axios.get(`https://swapi.dev/api/starships/?search=${info}`).then((res) => {
       setSw(res.data.results);
       setInfo("");

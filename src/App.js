@@ -1,5 +1,5 @@
 import "./App.css";
-import Description from "./components/Descritions/Description";
+import Description from "./components/Description/Description";
 import Header from "./components/Header/Header";
 import List from "./components/List/List";
 import { SwContextProvider } from "./context/SwContext";
