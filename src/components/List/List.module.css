@@ -9,6 +9,11 @@
     max-width:900px;
     width: 100%;
     color: white;
+    @media (max-width: 750px) {
+        width: 90%;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
 }
 
 .list li{
@@ -39,6 +44,10 @@
     position: fixed;
     bottom:10px;
     right: 100px;
+    @media (max-width: 750px) {
+        bottom: 10px;
+        right: 5px;
+    }
 }
 .btnMore:hover{
     background-color: white;
@@ -50,6 +59,11 @@
     border-radius: 10px;
     width: 300px;
     height: 200px;
+    @media (max-width: 750px) {
+        width: 80%;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
 }
 .desc{
   margin-top: 5px;
