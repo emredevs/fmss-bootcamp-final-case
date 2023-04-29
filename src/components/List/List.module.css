@@ -6,17 +6,23 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 3%;
-    width:900px;
+    max-width:900px;
+    width: 100%;
     color: white;
 }
 
 .list li{
     border-radius: 10px;
     border: 2px solid rgb(255, 255, 255);
-    height: 350px;
-    width: 35%;
+    height: 380px;
+    width: 330px;
     margin-top: 20px;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(25px);
+    @media (max-width: 750px) {
+        width: 90%;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
 }
 
 

@@ -3,6 +3,7 @@ import SwContext from "../../context/SwContext";
 import { NavLink, useParams } from "react-router-dom";
 import styles from "./Description.module.css";
 import Images from "../../Image.json";
+// detay butonuna tıklandığındaki gemiler hakkındaki detayların listelenmesi
 export default function Description() {
   const { id } = useParams();
   const { sw } = useContext(SwContext);
@@ -19,7 +20,7 @@ export default function Description() {
       )}
 
       <h1>{starWars.name}</h1>
-      <p>Yıldız Gemisi Sınıfı: {starWars.starship_class}</p>
+      <p> Yıldız Gemisi Sınıfı: {starWars.starship_class}</p>
       <p>Model: {starWars.model}</p>
       <p>Hiper Sürücü Derecelendirmesi: {starWars.hyperdrive_rating}</p>
       <p>Üretici: {starWars.manufacturer}</p>
@@ -30,7 +31,7 @@ export default function Description() {
       <p>Kargo Kapasitesi: {starWars.cargo_capacity}</p>
       <p>Maksimum Atmosfer Hızı: {starWars.max_atmosphering_speed}</p>
       <NavLink className={styles.NavLink} to="/">
-        <h3 className={styles.desc}>Home</h3>
+        <h3 className={styles.desc}>Hangara Dön</h3>
       </NavLink>
     </div>
   );

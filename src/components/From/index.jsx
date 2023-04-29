@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useContext, useState } from "react";
+import React, { useEffect, useContext } from "react";
 import SwContext from "../../context/SwContext";
 import styles from "./Form.module.css";
 export default function Form() {
@@ -16,6 +16,7 @@ export default function Form() {
   //   });
   // }, [info]);
 
+  //sayfa ilk yüklendiğinde bize ilk 4 gimiyi getir ve daha fazla yükle butonuna tıklandığında diğer gemileride listeler
   useEffect(() => {
     axios.get(`https://swapi.dev/api/starships/`).then((res) => {
       const firstTenShips = res.data.results.slice(0, more);
@@ -26,8 +27,10 @@ export default function Form() {
   console.log(sw);
   console.log(more);
 
+  // inputtan girilen model/name göre arama yaptığımızda ilgili veririn getirilmesi
   const formSubmit = (e) => {
     e.preventDefault();
+
     if (!info) {
       return;
     }
@@ -37,9 +40,8 @@ export default function Form() {
       setInfo("");
     });
   };
-
   return (
-    <div>
+    <div className={styles.searchForm}>
       <form onSubmit={formSubmit}>
         <label htmlFor="name">
           Name/Model:{" "}

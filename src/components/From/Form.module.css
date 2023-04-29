@@ -1,3 +1,11 @@
+.searchForm {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .Input{
     margin-top: 20px;
     padding: 10px;

@@ -1,17 +1,16 @@
 import "./App.css";
 import Description from "./components/Descritions/Description";
-import Form from "./components/From/Form";
 import Header from "./components/Header/Header";
 import List from "./components/List/List";
 import { SwContextProvider } from "./context/SwContext";
 import { Route, Routes } from "react-router-dom";
 
+// routing işleminin yapılması ve componentslerin çağarılması
 function App() {
   return (
     <div className="App">
-      <Header />
       <SwContextProvider>
-        <Form />
+        <Header />
         <Routes>
           <Route path="/" element={<List />} />
           <Route path="/description/:id" element={<Description />} />
