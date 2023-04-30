@@ -1,6 +1,6 @@
 import React, { createContext, useState } from "react";
 const SwContext = createContext();
-// verilerin componentler arasındaki statelerin belirlenip geöderilmesi
+// Determining and passing the states of data between components.
 export const SwContextProvider = ({ children }) => {
   const [sw, setSw] = useState([]);
   const [info, setInfo] = useState("");

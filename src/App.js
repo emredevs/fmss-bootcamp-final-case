@@ -1,19 +1,17 @@
-import "./App.css";
-import Description from "./components/Description/Description";
-import Header from "./components/Header/Header";
-import List from "./components/List/List";
-import { SwContextProvider } from "./context/SwContext";
 import { Route, Routes } from "react-router-dom";
+import { Detail } from "./pages/Detail";
+import { Home } from "./pages/";
+import { SwContextProvider } from "./context/SwContext";
+import "./App.css";
 
-// routing işleminin yapılması ve componentslerin çağarılması
+// Performing routing and calling components.
 function App() {
   return (
     <div className="App">
       <SwContextProvider>
-        <Header />
         <Routes>
-          <Route path="/" element={<List />} />
-          <Route path="/description/:id" element={<Description />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/starship/:id" element={<Detail />} />
         </Routes>
       </SwContextProvider>
     </div>

@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import SwContext from "../../context/SwContext";
-import styles from "./List.module.css";
 import { NavLink } from "react-router-dom";
+import SwContext from "../../context/SwContext";
 import Images from "../../Image.json";
-// API dan gelen verilerin listelenmesi
+import styles from "./List.module.css";
+// Listing the data received from the API.
 export default function List() {
   const { sw, setMore } = useContext(SwContext);
 
@@ -13,7 +13,7 @@ export default function List() {
         {sw.map((item, index) => {
           return (
             <li key={index}>
-              {/* Image.json dosyamdaki resimleri aldığımız yer */}
+              {/* The place where we obtain the images from the Image.json file. */}
               {Images.map((img, index) =>
                 img.name === item.name ? (
                   <img
@@ -34,7 +34,7 @@ export default function List() {
 
               <NavLink
                 className={styles.NavLink}
-                to={`/description/${item.name}`}
+                to={`/starship/${item.url.match(/\/(\d+)\/?$/)?.[1]}`}
               >
                 <h4 className={styles.desc}>Gemi Detayı. . .</h4>
               </NavLink>
